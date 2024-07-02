@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import ru.itis.summerpractice24.databinding.ActivityFragmentMainBinding
 
 class MainFragmentActivity : AppCompatActivity() {
@@ -11,15 +12,22 @@ class MainFragmentActivity : AppCompatActivity() {
 
     private  var controller: NavController? = null
 
+    private var controllet: NavController? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFragmentMainBinding.inflate(layoutInflater).also {
             setContentView(it.root)
         }
 
-
-        val controller = (supportFragmentManager.findFragmentById(R.id.container) as? NavHostFragment)
+        controller = (supportFragmentManager.findFragmentById(R.id.container) as? NavHostFragment)
             ?.navController
+
+
+        controller?.let { navController -> binding?.bottomNavigation?.setupWithNavController(navController) }
+
+
+
     }
 
 
