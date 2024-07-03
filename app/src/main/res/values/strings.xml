@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SummerPractice24</string>
+    <string name="first_screen">First Screen</string>
+    <string name="second_screen">Second Screen</string>
+    <string name="fourth_screen">Fourth Screen</string>
+    <string name="third_screen">Third Screen</string>
+    <string name="sixth_screen">Sixth screen</string>
+    <string name="fifth_screen">Fifth Screen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
