@@ -14,8 +14,6 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentFirstBinding.bind(view)
 
-
-
         binding?.run {
             button.setOnClickListener {
                 val text = editText.text?.toString()
@@ -23,6 +21,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
                 bundle.putString("ARG", text)
 
                 if (text?.isNotEmpty() == true) {
+
                     findNavController().navigate(R.id.action_firstFragment_to_secondFragment, args = bundle)
                 } else {
                     Snackbar.make(

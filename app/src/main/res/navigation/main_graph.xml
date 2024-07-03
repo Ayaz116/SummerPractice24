@@ -24,7 +24,11 @@
         android:id="@+id/thirdFragment"
         android:name="ru.itis.summerpractice24.ThirdFragment"
         android:label="fragment_third"
-        tools:layout="@layout/fragment_third" />
+        tools:layout="@layout/fragment_third" >
+        <action
+            android:id="@+id/action_thirdFragment_to_seventhFragment"
+            app:destination="@id/seventhFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fourthFragment"
         android:name="ru.itis.summerpractice24.FourthFragment"
@@ -40,4 +44,12 @@
         android:name="ru.itis.summerpractice24.SixthFragment"
         android:label="SixthFragment"
         tools:layout="@layout/fragment_sixth"/>
+    <fragment
+        android:id="@+id/seventhFragment"
+        android:name="ru.itis.summerpractice24.SeventhFragment"
+        android:label="SeventhFragment" >
+        <action
+            android:id="@+id/action_seventhFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
+    </fragment>
 </navigation>

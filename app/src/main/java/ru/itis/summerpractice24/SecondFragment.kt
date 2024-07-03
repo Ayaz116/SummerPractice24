@@ -14,6 +14,9 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
 
         val text = arguments?.getString("ARG")?:"ERROR"
 
+
+
+
         binding?.run {
             textView.text=text
         }
